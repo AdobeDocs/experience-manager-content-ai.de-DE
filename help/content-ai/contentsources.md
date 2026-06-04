@@ -28,7 +28,7 @@ Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Bedingungen erfüllt 
 
 ## Schritt 1: Öffnen der Registerkarte Content-KI-Konfiguration {#open-tab}
 
-1. Melden Sie sich bei [Cloud Manager an ](https://my.cloudmanager.adobe.com/) wählen Sie Ihr Programm aus.
+1. Melden Sie sich bei [Cloud Manager an &#x200B;](https://my.cloudmanager.adobe.com/) wählen Sie Ihr Programm aus.
 
    ![Cloud Manager-Startseite mit der Programmkarte](../assets/content-ai-onboarding-step-1.png)
 
@@ -72,7 +72,7 @@ Nachdem die Quelle erstellt wurde, lautet ihr Status **Neu**. Führen Sie eine e
 
    ![Quellliste der Content-KI mit hervorgehobenem Menü „Mehr Aktionen“ und hervorgehobener Option &quot;Trigger-Akquise“](../assets/content-ai-onboarding-step-7.png)
 
-1. Überprüfen Sie im Dialogfeld **** die Quelldetails - **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** - und wählen Sie **[!UICONTROL Trigger]**.
+1. Überprüfen Sie im Dialogfeld **&#x200B;**&#x200B;die Quelldetails - **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** - und wählen Sie **[!UICONTROL Trigger]**.
 
    ![Bestätigungsdialogfeld für die Trigger-Akquise](../assets/content-ai-onboarding-step-8.png)
 
@@ -132,5 +132,5 @@ Die Quellliste wird mit Ihren Änderungen aktualisiert. Wenn Sie die Quelle gel�
 ## Fehlerbehebung {#troubleshooting}
 
 * **Source verbleibt [!UICONTROL Indizierung] für einen längeren Zeitraum.** Wiederholen Sie die Akquise über das Menü (…). Wenn der Status nach einer zweiten Ausführung nicht angezeigt wird, stellen Sie sicher, dass die **[!UICONTROL Website-]**) öffentlich erreichbar ist und dass die **[!UICONTROL URLs ausschließen]**-Muster nicht jede Seite herausfiltern.
-* **Source wechselt nach [!UICONTROL  Ausführung zurück ]Neu** Der Crawler konnte keine Seiten aus der konfigurierten Stamm-URL abrufen. Bestätigen Sie, dass die URL mit `200 OK` antwortet und dass die Site keine automatisierten Anfragen blockiert.
+* **Source wechselt nach [!UICONTROL &#x200B; Ausführung zurück &#x200B;]Neu** Der Crawler konnte keine Seiten aus der konfigurierten Stamm-URL abrufen. Bestätigen Sie, dass die URL mit `200 OK` antwortet und dass die Site keine automatisierten Anfragen blockiert.
 * **[!UICONTROL Suche] gibt keine Ergebnisse für eine [!UICONTROL Verfügbare] Quelle zurück** Die Indizierung war erfolgreich, aber kein Inhalt stimmte mit der Abfrage überein. Versuchen Sie eine breitere Abfrage oder überprüfen Sie, ob die crawlen URLs die erwarteten Seiten enthalten.
