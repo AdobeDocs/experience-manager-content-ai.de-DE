@@ -47,7 +47,7 @@ AEM Content AI Services unterstützt zwei Authentifizierungsmethoden. Wählen Si
 
    >[!NOTE]
    >
-   >Wenn die API-Karte durch die Meldung „Lizenz erforderlich“ deaktiviert wird, wird Ihre AEM as a Cloud Service-Umgebung möglicherweise nicht modernisiert. Siehe [Modernisierung der AEM as a Cloud Service-](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
+   >Wenn die API-Karte durch die Meldung „Lizenz erforderlich“ deaktiviert wird, wird Ihre AEM as a Cloud Service-Umgebung möglicherweise nicht modernisiert. Siehe [Modernisierung der AEM as a Cloud Service-](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
 
 1. Wählen **[!UICONTROL Dialogfeld „API konfigurieren]** die Authentifizierung **[!UICONTROL Server-zu-Server]** aus.
 
