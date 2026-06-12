@@ -23,7 +23,7 @@ Dieses Handbuch führt Sie durch das Einrichten von Content-KI-Quellen in Cloud 
 Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind:
 
 * Sie haben ein gültiges Cloud Manager-Programm mit mindestens einer AEM as a Cloud Service-Umgebung.
-* Sie haben die **[Systemadministrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**-Rolle in Admin Console für das Programm.
+* Sie haben die **[Systemadministrator](https://experienceleague.adobe.com/de/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**-Rolle in Admin Console für das Programm.
 * Das Umgebungs-Produktprofil wurde in **Adobe Admin Console** bereitgestellt. Siehe [Einrichten eines Adobe Developer Console-Projekts](setup-adc-project.md).
 
 ## Schritt 1: Öffnen der Registerkarte Content-KI-Konfiguration {#open-tab}
