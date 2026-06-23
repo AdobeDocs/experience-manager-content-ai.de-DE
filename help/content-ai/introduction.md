@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content-KI, Übersicht, Inhaltsquelle, semantische Suche, Akquise, Cloud Manager
-source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Der Weg zu einer funktionierenden Content AI-Integration umfasst zwei Aufgaben:
 
 ### &#x200B;2. Steuern von Content-KI-Quellen {#control}
 
-Informationen zum Einrichten und Verwalten Ihrer Content-KI-Quellen für die Aktivierung KI-basierter Erlebnisse finden Sie unter [Steuern Ihrer Inhaltsquellen](contentsources.md).
+Richten Sie Ihre Inhalts-KI-Quellen ein und verwalten Sie sie, um KI-basierte Erlebnisse zu aktivieren. Weitere Informationen finden [ unter „Steuern ](contentsources.md) Inhaltsquellen“.
 
 ## Kennenlernen von Content-APIs  {#apis}
 
