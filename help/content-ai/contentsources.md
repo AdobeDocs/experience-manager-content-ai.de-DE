@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content-KI, Content-KI-Quellen, Akquise, Cloud Manager, Adobe Developer Console
-source-git-commit: 86c0b8b910583701dc4bd42b61e082cc5429cee8
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,42 @@ Dieses Handbuch führt Sie durch das Einrichten von Content-KI-Quellen in Cloud 
 Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind:
 
 * Sie haben ein gültiges Cloud Manager-Programm mit mindestens einer AEM as a Cloud Service-Umgebung.
-* Sie haben die **[Systemadministrator](https://experienceleague.adobe.com/de/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**-Rolle in Admin Console für das Programm.
-* Das Umgebungs-Produktprofil wurde in **Adobe Admin Console** bereitgestellt. Siehe [Einrichten eines Adobe Developer Console-Projekts](setup-adc-project.md).
+* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen anzeigen kann.
+* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-** für die Zielumgebung zugewiesen, mit dem die Benutzerin bzw. der Benutzer Inhaltsquellen erstellen und bearbeiten kann. Der Zugriff auf Cloud Manager allein ist nicht ausreichend - siehe [Zuweisen eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile) unten.
+* Das Umgebungs-Produktprofil wurde in **Adobe Admin Console bereitgestellt**.
+
+## Zuweisen eines Benutzers zu einem AEM-Produktprofil {#assign-product-profile}
+
+Gehen Sie wie folgt vor, um einem Benutzer Zugriff auf [!DNL Adobe Experience Manager] as a Cloud Service für eine bestimmte Umgebung zu gewähren. Weisen Sie das Profil zu, das dem Zugriff entspricht, den der Benutzer benötigt:
+
+* **[!UICONTROL AEM-]**: Inhaltsquellen anzeigen.
+* **[!UICONTROL AEM-]**: Erstellen und Bearbeiten von Inhaltsquellen.
+
+>[!NOTE]
+>
+>Benutzer müssen einem AEM-Produktprofil angehören, z. B. **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]**, um auf AEM zugreifen zu können. Der Zugriff auf Cloud Manager allein reicht nicht aus.
+
+Um diese Profile zuzuweisen, müssen Sie Systemadministrator mit dem Cloud Manager-Produktprofil [!UICONTROL Geschäftsinhaber] sein. Halten Sie den Namen und die E-Mail-Adresse des Benutzers bereit.
+
+1. Navigieren Sie in [&#128279;](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
+1. Wählen Sie das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für die **Veröffentlichungs** Ebene aus, z. B. `AEM Administrators - publish - Program 12345 - Environment 67890`. Content AI indiziert veröffentlichte Inhalte, sodass das Profil auf Veröffentlichungsebene zugewiesen werden muss, nicht auf der Autorenebene.
+1. Wählen Sie **[!UICONTROL Benutzende hinzufügen]** aus.
+1. Geben Sie den Namen und die E-Mail-Adresse des Benutzers ein und speichern Sie dann die Änderung. Der Benutzer wird dem Produktprofil hinzugefügt.
+
+Wiederholen Sie diese Schritte für jede Umgebung, in der der Benutzer Zugriff benötigt, z. B. Entwicklung, Staging oder Produktion.
+
+>[!CAUTION]
+>
+>Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht **.** Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
+
+### Zuweisung überprüfen {#verify-assignment}
+
+So überprüfen Sie, ob die Zuweisung erfolgreich war:
+
+1. Öffnen Sie [!DNL Admin Console] das von Ihnen zugewiesene Produktprofil erneut.
+1. Bestätigen Sie, dass der Benutzer in der Mitgliederliste angezeigt wird.
+
+Wenn Sie Zugriffs- oder Token-Probleme beheben möchten, vergewissern Sie sich, dass der Benutzer direkt zum Produktprofil hinzugefügt wird und nicht nur über eine Gruppe.
 
 ## Schritt 1: Öffnen der Registerkarte Content-KI-Konfiguration {#open-tab}
 
