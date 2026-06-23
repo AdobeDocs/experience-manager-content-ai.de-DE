@@ -67,7 +67,7 @@ Der Weg zu einer funktionierenden Content AI-Integration umfasst zwei Aufgaben:
 
 ### &#x200B;2. Steuern von Content-KI-Quellen {#control}
 
-Richten Sie Ihre Inhalts-KI-Quellen ein und verwalten Sie sie, um KI-basierte Erlebnisse zu aktivieren. Weitere Informationen finden [ unter „Steuern ](contentsources.md) Inhaltsquellen“.
+Richten Sie Ihre Inhalts-KI-Quellen ein und verwalten Sie sie, um KI-basierte Erlebnisse zu aktivieren. Weitere Informationen finden [&#x200B; unter „Steuern &#x200B;](contentsources.md) Inhaltsquellen“.
 
 ## Kennenlernen von Content-APIs  {#apis}
 
