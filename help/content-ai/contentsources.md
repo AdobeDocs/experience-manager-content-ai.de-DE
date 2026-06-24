@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content-KI, Content-KI-Quellen, Akquise, Cloud Manager, Adobe Developer Console
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1276'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Gehen Sie wie folgt vor, um einem Benutzer Zugriff auf [!DNL Adobe Experience Ma
 
 Um diese Profile zuzuweisen, müssen Sie Systemadministrator mit dem Cloud Manager-Produktprofil [!UICONTROL Geschäftsinhaber] sein. Halten Sie den Namen und die E-Mail-Adresse des Benutzers bereit.
 
-1. Navigieren Sie in [&#128279;](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
+1. Navigieren Sie in [](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
 1. Wählen Sie das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für die **Veröffentlichungs** Ebene aus, z. B. `AEM Administrators - publish - Program 12345 - Environment 67890`. Content AI indiziert veröffentlichte Inhalte, sodass das Profil auf Veröffentlichungsebene zugewiesen werden muss, nicht auf der Autorenebene.
 1. Wählen Sie **[!UICONTROL Benutzende hinzufügen]** aus.
 1. Geben Sie den Namen und die E-Mail-Adresse des Benutzers ein und speichern Sie dann die Änderung. Der Benutzer wird dem Produktprofil hinzugefügt.
@@ -49,7 +49,7 @@ Wiederholen Sie diese Schritte für jede Umgebung, in der der Benutzer Zugriff b
 
 >[!CAUTION]
 >
->Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht **.** Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
+>Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht ]**.**[!UICONTROL  Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
 
 ### Zuweisung überprüfen {#verify-assignment}
 
@@ -62,7 +62,7 @@ Wenn Sie Zugriffs- oder Token-Probleme beheben möchten, vergewissern Sie sich, 
 
 ## Schritt 1: Öffnen der Registerkarte Content-KI-Konfiguration {#open-tab}
 
-1. Melden Sie sich bei [Cloud Manager an &#x200B;](https://my.cloudmanager.adobe.com/) wählen Sie Ihr Programm aus.
+1. Melden Sie sich bei [Cloud Manager an ](https://my.cloudmanager.adobe.com/) wählen Sie Ihr Programm aus.
 
    ![Cloud Manager-Startseite mit der Programmkarte](../assets/content-ai-onboarding-step-1.png)
 
@@ -96,17 +96,19 @@ Eine Inhaltsquelle definiert die Website, die Content-KI crawlen und indiziert.
 
    ![Dropdown-Liste „Häufigkeit der Aktualisierung“ mit verfügbaren Optionen](../assets/content-ai-onboarding-step-5-1.png)
 
-1. Wählen Sie **[!UICONTROL Source erstellen]** aus.
+1. Wählen Sie **[!UICONTROL Source erstellen]** aus. Die Akquise wird automatisch gestartet und die Quelle wechselt zu **Indizierung**.
 
-## &#x200B;3. Schritt - Trigger-Akquise {#trigger-acquisition}
+   ![Liste der Inhaltsquellen, in der die neu erstellte Quelle im Indizierungsstatus angezeigt wird](../assets/content-ai-onboarding-step-6.png)
 
-Nachdem die Quelle erstellt wurde, lautet ihr Status **Neu**. Führen Sie eine erste Akquise aus, um mit der Indizierung zu beginnen.
+## &#x200B;3. Schritt - Akquise erneut ausführen {#trigger-acquisition}
+
+Die Akquise wird automatisch ausgeführt, wenn Sie eine Quelle erstellen, und dann nach dem Zeitplan, der durch die **[!UICONTROL Aktualisierungshäufigkeit“ festgelegt]**. Sie können eine Ausführung auch jederzeit manuell als Trigger festlegen, z. B. um die Indizierung sofort nach der Veröffentlichung neuer Inhalte neu durchzuführen.
 
 1. Klicken Sie in der Quellliste auf das Symbol **Mehr Aktionen** (…) neben Ihrer Quelle und wählen Sie dann **[!UICONTROL Trigger-Akquise]**.
 
    ![Quellliste der Content-KI mit hervorgehobenem Menü „Mehr Aktionen“ und hervorgehobener Option &quot;Trigger-Akquise“](../assets/content-ai-onboarding-step-7.png)
 
-1. Überprüfen Sie im Dialogfeld **&#x200B;**&#x200B;die Quelldetails - **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** - und wählen Sie **[!UICONTROL Trigger]**.
+1. Überprüfen Sie im Dialogfeld **** die Quelldetails - **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** - und wählen Sie **[!UICONTROL Trigger]**.
 
    ![Bestätigungsdialogfeld für die Trigger-Akquise](../assets/content-ai-onboarding-step-8.png)
 
@@ -116,7 +118,7 @@ Nach dem Beginn der Akquise wird der Quellstatus in Echtzeit aktualisiert.
 
 | Status | Bedeutung |
 | --- | --- |
-| **Neu** | Source wurde erstellt. Es wurde noch keine Akquise durchgeführt. |
+| **Neu** | Source hat gerade erstellt. Die automatische Akquise hat noch nicht begonnen. Dieser Status ist kurz. |
 | **Indizierung** | Akquise läuft; Inhalte werden crawlen und indiziert. |
 | **Verfügbar** | Die Indizierung ist abgeschlossen. Die Quelle kann jetzt Suchabfragen bereitstellen. |
 
@@ -130,15 +132,17 @@ Warten Sie, bis der Status **Verfügbar“ erreicht**, bevor Sie den Index durch
 
 Sobald der Quellstatus &quot;**&quot; ist** können Sie Suchabfragen direkt in Cloud Manager ausführen, um zu überprüfen, ob die Inhalte korrekt indiziert wurden.
 
-1. Wählen Sie in der Quellliste **[!UICONTROL Suchen]** neben Ihrer Quelle aus.
+1. Wählen Sie in der Quellliste das Symbol **Suchen** (Lupe) neben Ihrer Quelle aus.
 
-   ![Liste der Inhaltsquellen mit hervorgehobener Schaltfläche „Suchen“ auf einer verfügbaren Quelle](../assets/content-ai-onboarding-step-13.png)
+   ![Liste der Inhaltsquellen mit hervorgehobenem Suchsymbol in einer verfügbaren Quelle](../assets/content-ai-onboarding-step-13.png)
 
 1. Geben Sie eine Abfrage in das Suchfeld ein. Die Ergebnisse zeigen eine Liste übereinstimmender Elemente mit einem Übereinstimmungswert und einem Inhaltstyp (z. B **„PAGE** oder **PDF**). Wenn Sie ein Ergebnis auswählen, wird eine Vorschau auf der rechten Seite geöffnet.
 
    ![Suchbereich mit einer Abfrage, übereinstimmenden Ergebnissen mit Übereinstimmungsbewertungen und einem Vorschaubereich für das obere Ergebnis](../assets/content-ai-onboarding-step-14.png)
 
 ## Ändern oder Löschen einer Source {#modify-source}
+
+### Ändern einer Quelle {#modify}
 
 So aktualisieren Sie eine Quellkonfiguration, nachdem sie erstellt wurde:
 
@@ -148,15 +152,19 @@ So aktualisieren Sie eine Quellkonfiguration, nachdem sie erstellt wurde:
 
 1. Aktualisieren **[!UICONTROL im Dialogfeld Ändern der Content-KI-]**&quot; bei Bedarf **[!UICONTROL Beschreibung]**, **[!UICONTROL Website-]**, **[!UICONTROL URLs]** oder **[!UICONTROL Aktualisierungshäufigkeit]**. Der **[!UICONTROL Name der Content]** KI-Konfiguration“ ist schreibgeschützt und kann nicht geändert werden.
 
-1. Wählen Sie **[!UICONTROL Speichern]**, um die Änderungen anzuwenden, oder wählen Sie **[!UICONTROL Löschen]** unten links im Dialogfeld aus, um die Quelle vollständig zu entfernen.
+   ![Das Dialogfeld „Content AI Source ändern“ mit hervorgehobenen bearbeitbaren Feldern](../assets/content-ai-onboarding-step-12.png)
+
+1. Wählen **[!UICONTROL Speichern]**, um die Änderungen anzuwenden. Die Quellliste wird mit Ihren Änderungen aktualisiert.
+
+### Löschen einer Quelle {#delete}
+
+1. Wählen Sie in der Quellliste das Symbol **Mehr Aktionen** (…) neben der Quelle aus und klicken Sie dann auf **[!UICONTROL Löschen]**.
 
    >[!WARNING]
    >
    >Das Löschen einer Quelle ist dauerhaft. Alle indizierten Inhalte für diese Quelle werden entfernt und können keine Suchabfragen mehr bereitstellen.
 
-   ![Das Dialogfeld „Content AI Source ändern“ mit hervorgehobenen bearbeitbaren Feldern und der Schaltfläche „Löschen“ unten links](../assets/content-ai-onboarding-step-12.png)
-
-Die Quellliste wird mit Ihren Änderungen aktualisiert. Wenn Sie die Quelle gelöscht haben, wird sie nicht mehr in der Liste angezeigt.
+Nach dem Löschen wird die Quelle nicht mehr in der Liste angezeigt.
 
 ## Nächste Schritte {#next-steps}
 
@@ -166,5 +174,5 @@ Die Quellliste wird mit Ihren Änderungen aktualisiert. Wenn Sie die Quelle gel�
 ## Fehlerbehebung {#troubleshooting}
 
 * **Source verbleibt [!UICONTROL Indizierung] für einen längeren Zeitraum.** Wiederholen Sie die Akquise über das Menü (…). Wenn der Status nach einer zweiten Ausführung nicht angezeigt wird, stellen Sie sicher, dass die **[!UICONTROL Website-]**) öffentlich erreichbar ist und dass die **[!UICONTROL URLs ausschließen]**-Muster nicht jede Seite herausfiltern.
-* **Source wechselt nach [!UICONTROL &#x200B; Ausführung zurück &#x200B;]Neu** Der Crawler konnte keine Seiten aus der konfigurierten Stamm-URL abrufen. Bestätigen Sie, dass die URL mit `200 OK` antwortet und dass die Site keine automatisierten Anfragen blockiert.
+* **Source wechselt nach [!UICONTROL  Ausführung zurück ]Neu** Der Crawler konnte keine Seiten aus der konfigurierten Stamm-URL abrufen. Bestätigen Sie, dass die URL mit `200 OK` antwortet und dass die Site keine automatisierten Anfragen blockiert.
 * **[!UICONTROL Suche] gibt keine Ergebnisse für eine [!UICONTROL Verfügbare] Quelle zurück** Die Indizierung war erfolgreich, aber kein Inhalt stimmte mit der Abfrage überein. Versuchen Sie eine breitere Abfrage oder überprüfen Sie, ob die crawlen URLs die erwarteten Seiten enthalten.
