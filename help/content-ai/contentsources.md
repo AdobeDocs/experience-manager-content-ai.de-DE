@@ -40,7 +40,7 @@ Gehen Sie wie folgt vor, um einem Benutzer Zugriff auf [!DNL Adobe Experience Ma
 
 Um diese Profile zuzuweisen, müssen Sie Systemadministrator mit dem Cloud Manager-Produktprofil [!UICONTROL Geschäftsinhaber] sein. Halten Sie den Namen und die E-Mail-Adresse des Benutzers bereit.
 
-1. Navigieren Sie in [](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
+1. Navigieren Sie in [&#128279;](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
 1. Wählen Sie das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für die **Veröffentlichungs** Ebene aus, z. B. `AEM Administrators - publish - Program 12345 - Environment 67890`. Content AI indiziert veröffentlichte Inhalte, sodass das Profil auf Veröffentlichungsebene zugewiesen werden muss, nicht auf der Autorenebene.
 1. Wählen Sie **[!UICONTROL Benutzende hinzufügen]** aus.
 1. Geben Sie den Namen und die E-Mail-Adresse des Benutzers ein und speichern Sie dann die Änderung. Der Benutzer wird dem Produktprofil hinzugefügt.
@@ -49,7 +49,7 @@ Wiederholen Sie diese Schritte für jede Umgebung, in der der Benutzer Zugriff b
 
 >[!CAUTION]
 >
->Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht ]**.**[!UICONTROL  Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
+>Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht **.** Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
 
 ### Zuweisung überprüfen {#verify-assignment}
 
@@ -62,7 +62,7 @@ Wenn Sie Zugriffs- oder Token-Probleme beheben möchten, vergewissern Sie sich, 
 
 ## Schritt 1: Öffnen der Registerkarte Content-KI-Konfiguration {#open-tab}
 
-1. Melden Sie sich bei [Cloud Manager an ](https://my.cloudmanager.adobe.com/) wählen Sie Ihr Programm aus.
+1. Melden Sie sich bei [Cloud Manager an &#x200B;](https://my.cloudmanager.adobe.com/) wählen Sie Ihr Programm aus.
 
    ![Cloud Manager-Startseite mit der Programmkarte](../assets/content-ai-onboarding-step-1.png)
 
@@ -108,7 +108,7 @@ Die Akquise wird automatisch ausgeführt, wenn Sie eine Quelle erstellen, und da
 
    ![Quellliste der Content-KI mit hervorgehobenem Menü „Mehr Aktionen“ und hervorgehobener Option &quot;Trigger-Akquise“](../assets/content-ai-onboarding-step-7.png)
 
-1. Überprüfen Sie im Dialogfeld **** die Quelldetails - **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** - und wählen Sie **[!UICONTROL Trigger]**.
+1. Überprüfen Sie im Dialogfeld **&#x200B;**&#x200B;die Quelldetails - **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** - und wählen Sie **[!UICONTROL Trigger]**.
 
    ![Bestätigungsdialogfeld für die Trigger-Akquise](../assets/content-ai-onboarding-step-8.png)
 
@@ -174,5 +174,5 @@ Nach dem Löschen wird die Quelle nicht mehr in der Liste angezeigt.
 ## Fehlerbehebung {#troubleshooting}
 
 * **Source verbleibt [!UICONTROL Indizierung] für einen längeren Zeitraum.** Wiederholen Sie die Akquise über das Menü (…). Wenn der Status nach einer zweiten Ausführung nicht angezeigt wird, stellen Sie sicher, dass die **[!UICONTROL Website-]**) öffentlich erreichbar ist und dass die **[!UICONTROL URLs ausschließen]**-Muster nicht jede Seite herausfiltern.
-* **Source wechselt nach [!UICONTROL  Ausführung zurück ]Neu** Der Crawler konnte keine Seiten aus der konfigurierten Stamm-URL abrufen. Bestätigen Sie, dass die URL mit `200 OK` antwortet und dass die Site keine automatisierten Anfragen blockiert.
+* **Source wechselt nach [!UICONTROL &#x200B; Ausführung zurück &#x200B;]Neu** Der Crawler konnte keine Seiten aus der konfigurierten Stamm-URL abrufen. Bestätigen Sie, dass die URL mit `200 OK` antwortet und dass die Site keine automatisierten Anfragen blockiert.
 * **[!UICONTROL Suche] gibt keine Ergebnisse für eine [!UICONTROL Verfügbare] Quelle zurück** Die Indizierung war erfolgreich, aber kein Inhalt stimmte mit der Abfrage überein. Versuchen Sie eine breitere Abfrage oder überprüfen Sie, ob die crawlen URLs die erwarteten Seiten enthalten.
