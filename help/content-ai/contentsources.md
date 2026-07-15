@@ -40,7 +40,7 @@ Gehen Sie wie folgt vor, um einem Benutzer Zugriff auf [!DNL Adobe Experience Ma
 
 Um diese Profile zuzuweisen, müssen Sie Systemadministrator mit dem Cloud Manager-Produktprofil [!UICONTROL Geschäftsinhaber] sein. Halten Sie den Namen und die E-Mail-Adresse des Benutzers bereit.
 
-1. Navigieren Sie in [](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
+1. Navigieren Sie in [&#128279;](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
 1. Wählen Sie das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für die **Veröffentlichungs** Ebene aus, z. B. `AEM Administrators - publish - Program 12345 - Environment 67890`. Content AI indiziert veröffentlichte Inhalte, sodass das Profil auf Veröffentlichungsebene zugewiesen werden muss, nicht auf der Autorenebene.
 1. Wählen Sie **[!UICONTROL Benutzende hinzufügen]** aus.
 1. Geben Sie den Namen und die E-Mail-Adresse des Benutzers ein und speichern Sie dann die Änderung. Der Benutzer wird dem Produktprofil hinzugefügt.
@@ -49,7 +49,7 @@ Wiederholen Sie diese Schritte für jede Umgebung, in der der Benutzer Zugriff b
 
 >[!CAUTION]
 >
->Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht ]**.**[!UICONTROL  Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
+>Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht **.** Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
 
 ### Zuweisung überprüfen {#verify-assignment}
 
