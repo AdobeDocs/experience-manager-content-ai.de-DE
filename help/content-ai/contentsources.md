@@ -1,28 +1,28 @@
 ---
-title: Einrichten und Verwalten Ihrer Content-KI-Quellen
-description: Erfahren Sie, wie Sie die AEM Content AI in Cloud Manager konfigurieren, indem Sie Ihre erste Inhaltsquelle einrichten und die Akquise auslösen.
+title: Einrichten und Verwalten von Content-KI-Quellen
+description: Erfahren Sie, wie Sie Content-KI für AEM in Cloud Manager konfigurieren, indem Sie Ihre erste Inhaltsquelle einrichten und die Erfassung auslösen.
 topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
-keywords: AEM Content-KI, Content-KI-Quellen, Akquise, Cloud Manager, Adobe Developer Console
+keywords: Content-KI für AEM, Content-KI-Quellen, Erfassung, Cloud Manager, Adobe Developer Console
 source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
 source-wordcount: '1276'
-ht-degree: 1%
+ht-degree: 61%
 
 ---
 
 
-# Einrichten und Verwalten Ihrer Content-KI-Quellen
+# Einrichten und Verwalten von Content-KI-Quellen
 
-Dieses Handbuch führt Sie durch das Einrichten von Content-KI-Quellen in Cloud Manager - von der Erfüllung der Voraussetzungen bis zur Erstellung einer Inhaltsquelle und der Bestätigung, dass sie indiziert und verfügbar ist.
+Dieses Handbuch führt Sie durch die Einrichtung von Content-KI-Quellen in Cloud Manager – von der Erfüllung der Voraussetzungen über die Erstellung einer Inhaltsquelle bis hin zur Bestätigung, dass diese indiziert und verfügbar ist.
 
 ## Voraussetzungen {#prerequisites}
 
 Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind:
 
-* Sie haben ein gültiges Cloud Manager-Programm mit mindestens einer AEM as a Cloud Service-Umgebung.
+* Sie verfügen über ein aktives Cloud Manager-Programm mit mindestens einer AEM as a Cloud Service-Umgebung.
 * Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen anzeigen kann.
 * Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-** für die Zielumgebung zugewiesen, mit dem die Benutzerin bzw. der Benutzer Inhaltsquellen erstellen und bearbeiten kann. Der Zugriff auf Cloud Manager allein ist nicht ausreichend - siehe [Zuweisen eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile) unten.
 * Das Umgebungs-Produktprofil wurde in **Adobe Admin Console bereitgestellt**.
@@ -60,43 +60,43 @@ So überprüfen Sie, ob die Zuweisung erfolgreich war:
 
 Wenn Sie Zugriffs- oder Token-Probleme beheben möchten, vergewissern Sie sich, dass der Benutzer direkt zum Produktprofil hinzugefügt wird und nicht nur über eine Gruppe.
 
-## Schritt 1: Öffnen der Registerkarte Content-KI-Konfiguration {#open-tab}
+## Schritt 1: Öffnen der Registerkarte für die Content-KI-Konfiguration {#open-tab}
 
-1. Melden Sie sich bei [Cloud Manager an &#x200B;](https://my.cloudmanager.adobe.com/) wählen Sie Ihr Programm aus.
+1. Melden Sie sich bei [Cloud Manager](https://my.cloudmanager.adobe.com/) an und wählen Sie Ihr Programm aus.
 
    ![Cloud Manager-Startseite mit der Programmkarte](../assets/content-ai-onboarding-step-1.png)
 
-1. Suchen Sie in **[!UICONTROL Programmübersicht]** den Abschnitt **[!UICONTROL Umgebungen]** und wählen Sie die zu konfigurierende Umgebung aus.
+1. Suchen Sie auf der Seite **[!UICONTROL Programmüberblick]** den Abschnitt **[!UICONTROL Umgebungen]** und wählen Sie die Umgebung aus, die Sie konfigurieren möchten.
 
-   ![Programmübersicht mit hervorgehobener Produktionsumgebung](../assets/content-ai-onboarding-step-2.png)
+   ![Programmüberblick mit einer hervorgehobenen Produktionsumgebung](../assets/content-ai-onboarding-step-2.png)
 
-1. Wählen Sie auf der Seite mit den Umgebungsdetails die Registerkarte **[!UICONTROL Content-KI-Konfiguration]** aus.
+1. Wählen Sie auf der Detailseite der Umgebung die Registerkarte **[!UICONTROL Content-KI-Konfiguration]** aus.
 
-   ![Umgebungsdetailseite mit hervorgehobener Registerkarte „Content-KI-Konfiguration“](../assets/content-ai-onboarding-step-3.png)
+   ![Detailseite der Umgebung mit hervorgehobener Registerkarte „Content-KI-Konfiguration“](../assets/content-ai-onboarding-step-3.png)
 
-## Schritt 2: Erstellen einer Content-KI-Source {#create-source}
+## Schritt 2: Erstellen einer Content-KI-Quelle {#create-source}
 
-Eine Inhaltsquelle definiert die Website, die Content-KI crawlen und indiziert.
+Eine Inhaltsquelle definiert die Website, die von Content-KI gecrawlt und indiziert wird.
 
-1. Wählen Sie auf der Registerkarte **[!UICONTROL Content]** KI-Konfiguration“ **[!UICONTROL Source erstellen]** aus.
+1. Wählen Sie auf der Registerkarte **[!UICONTROL Content-KI-Konfiguration]** die Option **[!UICONTROL Quelle erstellen]** aus.
 
-   ![Registerkarte „Konfiguration der Content-KI“ mit der Schaltfläche &quot;Source erstellen“](../assets/content-ai-onboarding-step-4.png)
+   ![Registerkarte „Content-KI-Konfiguration“ mit der Schaltfläche „Quelle erstellen“](../assets/content-ai-onboarding-step-4.png)
 
-1. Füllen **[!UICONTROL im Dialogfeld &quot;Source für]** Content-KI erstellen/hinzufügen“ die folgenden Felder aus:
+1. Füllen Sie im Dialogfeld **[!UICONTROL Neue Content-KI-Quelle erstellen/hinzufügen]** die folgenden Felder aus:
 
    | Feld | Beschreibung |
    | --- | --- |
-   | **[!UICONTROL Konfigurationsname der Content-KI]** | Eine eindeutige Kennung für diese Quelle (z. B. `my-site-index`). Kann nach der Erstellung nicht mehr geändert werden. |
+   | **[!UICONTROL Name der Content-KI-Konfiguration]** | Eine eindeutige Kennung für diese Quelle (z. B. `my-site-index`). Kann nach der Erstellung nicht mehr geändert werden. |
    | **[!UICONTROL Beschreibung]** | *(Optional)* Eine kurze Beschreibung der Inhaltsquelle. |
-   | **[!UICONTROL Website-Adresse]** | Die Stamm-URL der zu crawlen Website (z. B. `https://www.example.com/`). |
-   | **[!UICONTROL URLs ausschließen]** | *(Optional)* URL-Muster, die beim crawlen übersprungen werden sollen. |
-   | **[!UICONTROL Häufigkeit der Aktualisierung]** | Wie oft Content AI die Quelle erneut crawlen: Wöchentlich, Täglich, Täglich 4×, 60 Minuten oder 15 Minuten. |
+   | **[!UICONTROL Website-Adresse]** | Die Stamm-URL der zu crawlenden Website (z. B. `https://www.example.com/`). |
+   | **[!UICONTROL Ausschließen von URLs]** | *(Optional)* URL-Muster, die beim Crawlen übersprungen werden sollen. |
+   | **[!UICONTROL Aktualisierungshäufigkeit]** | Wie oft Content-KI die Quelle erneut crawlt: Wöchentlich, Täglich, Täglich (4×), Alle 60 Min. oder Alle 15 Min. |
 
-   ![Das Dialogfeld „Content AI Source erstellen“ mit ausgefüllten Feldern „Name“ und „Website-Adresse“ und der hervorgehobenen Schaltfläche &quot;Source erstellen“](../assets/content-ai-onboarding-step-5-0.png)
+   ![Dialogfeld „Content-KI-Quelle erstellen“ mit ausgefüllten Feldern für Name und Website-Adresse und hervorgehobener Schaltfläche „Quelle erstellen“](../assets/content-ai-onboarding-step-5-0.png)
 
-   ![Dropdown-Liste „Häufigkeit der Aktualisierung“ mit verfügbaren Optionen](../assets/content-ai-onboarding-step-5-1.png)
+   ![Dropdown-Menü „Aktualisierungshäufigkeit“ mit den verfügbaren Optionen](../assets/content-ai-onboarding-step-5-1.png)
 
-1. Wählen Sie **[!UICONTROL Source erstellen]** aus. Die Akquise wird automatisch gestartet und die Quelle wechselt zu **Indizierung**.
+1. Wählen Sie **[!UICONTROL Quelle erstellen]** aus. Die Akquise wird automatisch gestartet und die Quelle wechselt zu **Indizierung**.
 
    ![Liste der Inhaltsquellen, in der die neu erstellte Quelle im Indizierungsstatus angezeigt wird](../assets/content-ai-onboarding-step-6.png)
 
@@ -104,57 +104,57 @@ Eine Inhaltsquelle definiert die Website, die Content-KI crawlen und indiziert.
 
 Die Akquise wird automatisch ausgeführt, wenn Sie eine Quelle erstellen, und dann nach dem Zeitplan, der durch die **[!UICONTROL Aktualisierungshäufigkeit“ festgelegt]**. Sie können eine Ausführung auch jederzeit manuell als Trigger festlegen, z. B. um die Indizierung sofort nach der Veröffentlichung neuer Inhalte neu durchzuführen.
 
-1. Klicken Sie in der Quellliste auf das Symbol **Mehr Aktionen** (…) neben Ihrer Quelle und wählen Sie dann **[!UICONTROL Trigger-Akquise]**.
+1. Wählen Sie in der Quellenliste das Symbol **Weitere Aktionen** (…) neben Ihrer Quelle aus und anschließend **[!UICONTROL Erfassung auslösen]**.
 
-   ![Quellliste der Content-KI mit hervorgehobenem Menü „Mehr Aktionen“ und hervorgehobener Option &quot;Trigger-Akquise“](../assets/content-ai-onboarding-step-7.png)
+   ![Content-KI-Quellenliste mit geöffnetem Menü „Weitere Aktionen“ und hervorgehobener Option „Erfassung auslösen“](../assets/content-ai-onboarding-step-7.png)
 
-1. Überprüfen Sie im Dialogfeld **&#x200B;**&#x200B;die Quelldetails - **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** - und wählen Sie **[!UICONTROL Trigger]**.
+1. Überprüfen Sie im Dialogfeld **[!UICONTROL Erfassung auslösen]** die Quelldetails – **[!UICONTROL Inhaltsquelle]**, **[!UICONTROL Letzte Ausführung]** und **[!UICONTROL Nächste geplante Ausführung]** – und wählen Sie **[!UICONTROL Auslösen]** aus.
 
-   ![Bestätigungsdialogfeld für die Trigger-Akquise](../assets/content-ai-onboarding-step-8.png)
+   ![Bestätigungsdialogfeld „Erfassung auslösen“](../assets/content-ai-onboarding-step-8.png)
 
-## Schritt 4: Überwachen des Indexstatus {#monitor-status}
+## Schritt 4: Überwachen des Indizierungsstatus {#monitor-status}
 
-Nach dem Beginn der Akquise wird der Quellstatus in Echtzeit aktualisiert.
+Nach dem Beginn der Erfassung wird der Quellenstatus in Echtzeit aktualisiert.
 
 | Status | Bedeutung |
 | --- | --- |
 | **Neu** | Source hat gerade erstellt. Die automatische Akquise hat noch nicht begonnen. Dieser Status ist kurz. |
-| **Indizierung** | Akquise läuft; Inhalte werden crawlen und indiziert. |
-| **Verfügbar** | Die Indizierung ist abgeschlossen. Die Quelle kann jetzt Suchabfragen bereitstellen. |
+| **Indizierung** | Erfassung läuft; Inhalte werden gecrawlt und indiziert. |
+| **Verfügbar** | Indizierung abgeschlossen; die Quelle ist bereit für Suchabfragen. |
 
-![Inhaltsquellenliste mit dem Indizierungsstatus](../assets/content-ai-onboarding-step-9.png)
+![Liste der Inhaltsquellen mit dem Indizierungsstatus](../assets/content-ai-onboarding-step-9.png)
 
 ![Liste der Inhaltsquellen mit dem Status „Verfügbar“](../assets/content-ai-onboarding-step-10.png)
 
-Warten Sie, bis der Status **Verfügbar“ erreicht**, bevor Sie den Index durchsuchen oder die API testen.
+Warten Sie, bis der Status **Verfügbar** erreicht, bevor Sie den Index durchsuchen oder die API testen.
 
 ## Schritt 5: Durchsuchen indizierter Inhalte {#search-content}
 
-Sobald der Quellstatus &quot;**&quot; ist** können Sie Suchabfragen direkt in Cloud Manager ausführen, um zu überprüfen, ob die Inhalte korrekt indiziert wurden.
+Sobald der Quellenstatus **Verfügbar** lautet, können Sie Suchabfragen direkt in Cloud Manager ausführen, um zu überprüfen, ob die Inhalte korrekt indiziert wurden.
 
 1. Wählen Sie in der Quellliste das Symbol **Suchen** (Lupe) neben Ihrer Quelle aus.
 
    ![Liste der Inhaltsquellen mit hervorgehobenem Suchsymbol in einer verfügbaren Quelle](../assets/content-ai-onboarding-step-13.png)
 
-1. Geben Sie eine Abfrage in das Suchfeld ein. Die Ergebnisse zeigen eine Liste übereinstimmender Elemente mit einem Übereinstimmungswert und einem Inhaltstyp (z. B **„PAGE** oder **PDF**). Wenn Sie ein Ergebnis auswählen, wird eine Vorschau auf der rechten Seite geöffnet.
+1. Geben Sie eine Abfrage in das Suchfeld ein. Die Ergebnisse zeigen eine Liste übereinstimmender Elemente mit einem Übereinstimmungswert und dem Inhaltstyp (z. B. **PAGE** oder **PDF**). Wenn Sie ein Ergebnis auswählen, wird rechts eine Vorschau geöffnet.
 
-   ![Suchbereich mit einer Abfrage, übereinstimmenden Ergebnissen mit Übereinstimmungsbewertungen und einem Vorschaubereich für das obere Ergebnis](../assets/content-ai-onboarding-step-14.png)
+   ![Suchbereich mit einer Abfrage, übereinstimmenden Ergebnissen mit Übereinstimmungswerten und einem Vorschaufenster für das Top- Ergebnis](../assets/content-ai-onboarding-step-14.png)
 
-## Ändern oder Löschen einer Source {#modify-source}
+## Ändern oder Löschen einer Quelle {#modify-source}
 
 ### Ändern einer Quelle {#modify}
 
-So aktualisieren Sie eine Quellkonfiguration, nachdem sie erstellt wurde:
+So aktualisieren Sie eine Quellenkonfiguration nach der Erstellung:
 
-1. Klicken Sie in der Quellliste auf das Symbol **Mehr Aktionen** (…) neben der Quelle und dann auf **[!UICONTROL Bearbeiten]**.
+1. Wählen Sie in der Quellenliste das Symbol **Weitere Aktionen** (…) neben der Quelle aus und anschließend **[!UICONTROL Bearbeiten]**.
 
-   ![Liste der Inhaltsquellen mit dem hervorgehobenen Menü „Mehr Aktionen öffnen“ und „Bearbeiten“](../assets/content-ai-onboarding-step-11.png)
+   ![Liste der Inhaltsquellen mit geöffnetem Menü „Weitere Aktionen“ und hervorgehobener Option „Bearbeiten“](../assets/content-ai-onboarding-step-11.png)
 
-1. Aktualisieren **[!UICONTROL im Dialogfeld Ändern der Content-KI-]**&quot; bei Bedarf **[!UICONTROL Beschreibung]**, **[!UICONTROL Website-]**, **[!UICONTROL URLs]** oder **[!UICONTROL Aktualisierungshäufigkeit]**. Der **[!UICONTROL Name der Content]** KI-Konfiguration“ ist schreibgeschützt und kann nicht geändert werden.
+1. Aktualisieren Sie im Dialogfeld **[!UICONTROL Content-KI-Quelle ändern]** nach Bedarf die **[!UICONTROL Beschreibung]**, die **[!UICONTROL Website-Adresse]**, **[!UICONTROL auszuschließende URLs]** oder die **[!UICONTROL Aktualisierungshäufigkeit]**. Der **[!UICONTROL Name der Content-KI-Konfiguration]** ist schreibgeschützt und kann nicht geändert werden.
 
    ![Das Dialogfeld „Content AI Source ändern“ mit hervorgehobenen bearbeitbaren Feldern](../assets/content-ai-onboarding-step-12.png)
 
-1. Wählen **[!UICONTROL Speichern]**, um die Änderungen anzuwenden. Die Quellliste wird mit Ihren Änderungen aktualisiert.
+1. Wählen **[!UICONTROL Speichern]**, um die Änderungen anzuwenden. Die Quellenliste wird mit Ihren Änderungen aktualisiert.
 
 ### Löschen einer Quelle {#delete}
 
@@ -162,17 +162,17 @@ So aktualisieren Sie eine Quellkonfiguration, nachdem sie erstellt wurde:
 
    >[!WARNING]
    >
-   >Das Löschen einer Quelle ist dauerhaft. Alle indizierten Inhalte für diese Quelle werden entfernt und können keine Suchabfragen mehr bereitstellen.
+   >Das Löschen einer Quelle ist dauerhaft. Alle indizierten Inhalte für diese Quelle werden entfernt und stehen für Suchabfragen nicht mehr zur Verfügung.
 
 Nach dem Löschen wird die Quelle nicht mehr in der Liste angezeigt.
 
 ## Nächste Schritte {#next-steps}
 
-* [Adobe Developer Console-Projekt einrichten](setup-adc-project.md) - Erstellen Sie das ADC-Projekt und die Anmeldeinformationen, die Sie für den Aufruf der API benötigen.
-* [Content AI-API-Referenz](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Abfragen indizierter Inhalte mithilfe von semantischen, Volltext- oder Hybrid-Suchendpunkten.
+* [Einrichten eines Projekts in der Adobe Developer Console](setup-adc-project.md) – Erstellen Sie das ADC-Projekt und die Anmeldeinformationen, die Sie für den Aufruf der API benötigen.
+* [Referenzieren der Content-KI-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) – Fragen Sie Ihre indizierten Inhalte über Endpunkte für die semantische Suche, die Volltextsuche oder die Hybridsuche ab.
 
 ## Fehlerbehebung {#troubleshooting}
 
-* **Source verbleibt [!UICONTROL Indizierung] für einen längeren Zeitraum.** Wiederholen Sie die Akquise über das Menü (…). Wenn der Status nach einer zweiten Ausführung nicht angezeigt wird, stellen Sie sicher, dass die **[!UICONTROL Website-]**) öffentlich erreichbar ist und dass die **[!UICONTROL URLs ausschließen]**-Muster nicht jede Seite herausfiltern.
-* **Source wechselt nach [!UICONTROL &#x200B; Ausführung zurück &#x200B;]Neu** Der Crawler konnte keine Seiten aus der konfigurierten Stamm-URL abrufen. Bestätigen Sie, dass die URL mit `200 OK` antwortet und dass die Site keine automatisierten Anfragen blockiert.
-* **[!UICONTROL Suche] gibt keine Ergebnisse für eine [!UICONTROL Verfügbare] Quelle zurück** Die Indizierung war erfolgreich, aber kein Inhalt stimmte mit der Abfrage überein. Versuchen Sie eine breitere Abfrage oder überprüfen Sie, ob die crawlen URLs die erwarteten Seiten enthalten.
+* **Die Quelle verbleibt über einen längeren Zeitraum im Status [!UICONTROL Indizierung].** Wiederholen Sie die Erfassung über das Menü mit den drei Punkten (…). Wenn der Status nach einer zweiten Ausführung nicht voranschreitet, überprüfen Sie, ob die **[!UICONTROL Website-Adresse]** öffentlich erreichbar ist und die Muster unter **[!UICONTROL URLs ausschließen]** nicht alle Seiten herausfiltern.
+* **Die Quelle wechselt nach einer Ausführung wieder in den Status [!UICONTROL Neu].** Der Crawler konnte keine Seiten von der konfigurierten Stamm-URL abrufen. Stellen Sie sicher, dass die URL mit `200 OK` antwortet und die Website automatisierte Anfragen nicht blockiert.
+* **[!UICONTROL Suchen] liefert keine Ergebnisse für eine Quelle im Status [!UICONTROL Verfügbar].** Die Indizierung war erfolgreich, aber es stimmten keine Inhalte mit der Abfrage überein. Versuchen Sie es mit einer allgemeineren Abfrage oder überprüfen Sie, ob die gecrawlten URLs die von Ihnen erwarteten Seiten enthalten.
