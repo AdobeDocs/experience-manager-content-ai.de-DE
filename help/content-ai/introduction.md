@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: Content-KI für AEM, Überblick, Inhaltsquelle, semantische Suche, Erfassung, Cloud Manager
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '885'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 75%
 
 ## Intelligente Inhalte – von Grund auf KI-optimiert {#ai-ready}
 
-Kunden beginnen damit, Marken über KI zu begegnen, bevor sie jemals auf eine Website treffen. Chatassistenten, KI-Übersichten, Agenten, Konversationssuche, KI-Concierges - alle rufen Markeninhalte im Namen der Marke ab, fassen sie zusammen und stellen sie dar. Was sie sagen, ist nur so genau, aktuell und markenintern wie die Inhalte, die sie erreichen können.
-Für diese Verschiebung ist die AEM Content-KI konzipiert. Sie behandelt Markeninhalte als die Grundwahrheit, auf der KI-Erlebnisse ausgeführt werden - und gibt AEM-Kunden die Tools an die Hand, um diese Grundwahrheit auf Autorenseite schneller zu erstellen und sie für verbraucherorientierte KI-gesteuerte Erlebnisse auf Veröffentlichungsseite sauber bereitzustellen.
+Kundinnen und Kunden kommen inzwischen über KI mit Marken in Kontakt, bevor sie deren Website besuchen. Chat-Assistenten, KI-Überblicke, Agents, dialogorientierte Suche, KI-Concierges – all diese Funktionen rufen Markeninhalte für die Marke ab, fassen sie zusammen und stellen sie dar.Was sie wiedergeben, ist nur so korrekt, aktuell und markenkonform, wie die Inhalte, die sie erfassen können.
+Für diese Verschiebung ist die Content-KI von AEM konzipiert. Markeninhalte werden als die Grundwahrheit behandelt, basierend auf der KI-Erlebnisse ausgeführt werden. Dies stattet AEM-Kundinnen und -Kunden mit den Tools aus, mit denen sie diese Grundwahrheit auf Autorenseite schneller erstellen und sie für verbraucherorientierte KI-gesteuerte Erlebnisse auf Veröffentlichungsseite reibungslos bereitstellen können.
 
 **Auf der Autorenseite** verankert Content-KI für AEM die Erstellung in freigegebenen Markenquellen. KI-gestützte Inhaltserstellung, das Finden von Inhalten mittels natürlicher Sprache über bestehende Seiteninhalte, Fragmente und Assets hinweg sowie eine markenkonforme Generierung ermöglichen es Teams, Varianten für neue Zielgruppen, Regionen und Kanäle zu erstellen – direkt in AEM und ohne von bereits freigegebenen Inhalten abzuweichen.
 
@@ -27,11 +27,11 @@ Für diese Verschiebung ist die AEM Content-KI konzipiert. Sie behandelt Markeni
 
 ### Was dies für AEM-Kundinnen und -Kunden bedeutet {#what-it-means}
 
-Genehmigte Inhalte sind die Verteidigung der Marke gegen Halluzinationen. Wenn KI auf regulierten AEM-Inhalten basiert, bleiben Antworten standardmäßig korrekt, aktuell und markenintern.
-Die Inhaltserstellung hält mit der Nachfrage im KI-Zeitalter Schritt. Teams generieren Kopien und Bilder für weitere Zielgruppen und Momente innerhalb des Authoring-Erlebnisses - aus genehmigten Quellen, anstatt leer zu beginnen.
-Entdeckung funktioniert so, wie Menschen und Maschinen tatsächlich fragen. Die zielbasierte Suche in natürlicher Sprache nach Assets, Fragmenten, Seiten und Formularen wandelt vorhandene Inhalte in eine wiederverwendbare Quelle um.
-Personalization skaliert durch Wiederverwendung, nicht durch Duplizierung. Gesteuerte Komponenten werden zu Varianten neu kombiniert, anstatt sich zu nicht verfolgten Kopien zu vermehren.
-Veröffentlichungskanäle enthalten jetzt KI-Oberflächen. Inhalte werden in Formen bereitgestellt, die Menschen, Agenten und KI-vermittelte Erlebnisse alle konsumieren können - ohne separate Pipelines für jede Konfiguration.
+Genehmigte Inhalte sind die Mittel einer Marke gegen Halluzinationen. Wenn KI auf regulierte AEM-Inhalte zurückgreift, bleiben Antworten standardmäßig korrekt, aktuell und markenkonform.
+Das Authoring hält mit der Nachfrage im KI-Zeitalter Schritt. Teams generieren Kopien und Bilder für weitere Zielgruppen und Momente innerhalb des Authoring-Erlebnisses. Dabei stützen sie sich auf genehmigte Quellen anstatt von null anzufangen.
+Auffindbarkeit funktioniert basierend auf der Art und Weise wie Personen und Maschinen tatsächlich Fragen stellen. Die auf Absicht basierte Suche in natürlicher Sprache über Assets, Fragmente, Seiten und Formulare hinweg verwandelt bestehende Inhalte in wiederverwendbares Material.
+Personalisierung wird durch Wiederverwendung skaliert, nicht durch Duplizierung. Gesteuerte Komponenten werden zu Varianten neu kombiniert, anstatt zu nicht verfolgten Kopien multipliziert zu werden.
+Veröffentlichungskanäle enthalten jetzt KI-Oberflächen. Inhalte werden in Formen bereitgestellt, die Menschen, Agents und KI-vermittelte Erlebnisse konsumieren können – ohne separate Pipelines für jede Form.
 
 **Der entscheidende Punkt: Bestehende, vertrauenswürdige Markeninhalte sind heute wertvoller als je zuvor. Jedes freigegebene Fragment, jedes Asset und jede Seite, die sich bereits in AEM befinden, werden zur „Ground Truth“ (der verlässlichen Datenbasis), auf die KI-gestützte Erlebnisse angewiesen sind – und Content-KI für AEM sorgt dafür, dass diese Bibliothek wiederverwendbar, auffindbar und bereit ist, die Zukunft zu gestalten.**
 
@@ -67,8 +67,8 @@ Der Weg zu einer funktionierenden Content-KI-Integration umfasst zwei Aufgaben:
 
 ### &#x200B;2. Steuern von Content-KI-Quellen {#control}
 
-Richten Sie Ihre Inhalts-KI-Quellen ein und verwalten Sie sie, um KI-basierte Erlebnisse zu aktivieren. Weitere Informationen finden [&#x200B; unter „Steuern &#x200B;](contentsources.md) Inhaltsquellen“.
+Weitere Informationen zum Einrichten und Verwalten Ihrer Content-KI-Quellen für KI-basierte Erlebnisse finden Sie unter [Steuern von Inhaltsquellen](contentsources.md).
 
 ## Informationen zu Content-KI-APIs  {#apis}
 
-Entdecken Sie die funktionale Bandbreite von Content-KI für AEM – die APIs zeigen das volle Potenzial der Plattform. Siehe [Content AI-APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
+Entdecken Sie die funktionale Bandbreite von Content-KI für AEM – die APIs zeigen das volle Potenzial der Plattform. Siehe [Content-KI-APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).

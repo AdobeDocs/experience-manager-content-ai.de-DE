@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: Content-KI für AEM, Content-KI-Quellen, Erfassung, Cloud Manager, Adobe Developer Console
 source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1276'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
@@ -23,42 +23,42 @@ Dieses Handbuch führt Sie durch die Einrichtung von Content-KI-Quellen in Cloud
 Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind:
 
 * Sie verfügen über ein aktives Cloud Manager-Programm mit mindestens einer AEM as a Cloud Service-Umgebung.
-* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen anzeigen kann.
-* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-** für die Zielumgebung zugewiesen, mit dem die Benutzerin bzw. der Benutzer Inhaltsquellen erstellen und bearbeiten kann. Der Zugriff auf Cloud Manager allein ist nicht ausreichend - siehe [Zuweisen eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile) unten.
-* Das Umgebungs-Produktprofil wurde in **Adobe Admin Console bereitgestellt**.
+* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-Benutzende** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen anzeigen kann.
+* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-Admins** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen erstellen und bearbeiten kann.Der Zugriff auf Cloud Manager allein ist nicht ausreichend – siehe [Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile) unten.
+* Das Produktprofil der Umgebung wurde in der **Adobe Admin Console** bereitgestellt.
 
-## Zuweisen eines Benutzers zu einem AEM-Produktprofil {#assign-product-profile}
+## Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil {#assign-product-profile}
 
-Gehen Sie wie folgt vor, um einem Benutzer Zugriff auf [!DNL Adobe Experience Manager] as a Cloud Service für eine bestimmte Umgebung zu gewähren. Weisen Sie das Profil zu, das dem Zugriff entspricht, den der Benutzer benötigt:
+Gehen Sie wie folgt vor, um einer Benutzerin bzw. einem Benutzer Zugriff auf [!DNL Adobe Experience Manager] as a Cloud Service für eine bestimmte Umgebung zu gewähren. Weisen Sie das Profil mit dem entsprechenden Zugriff zu, den die Benutzerin bzw. der Benutzer benötigt:
 
-* **[!UICONTROL AEM-]**: Inhaltsquellen anzeigen.
-* **[!UICONTROL AEM-]**: Erstellen und Bearbeiten von Inhaltsquellen.
+* **[!UICONTROL AEM-Benutzende]**: Anzeigen von Inhaltsquellen.
+* **[!UICONTROL AEM-Admins]**: Erstellen und Bearbeiten von Inhaltsquellen.
 
 >[!NOTE]
 >
->Benutzer müssen einem AEM-Produktprofil angehören, z. B. **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]**, um auf AEM zugreifen zu können. Der Zugriff auf Cloud Manager allein reicht nicht aus.
+>Benutzende müssen einem AEM-Produktprofil angehören, z. B. **[!UICONTROL AEM-Benutzende]** oder **[!UICONTROL AEM-Admins]**, um auf AEM zugreifen zu können. Der Zugriff auf Cloud Manager allein reicht nicht aus.
 
-Um diese Profile zuzuweisen, müssen Sie Systemadministrator mit dem Cloud Manager-Produktprofil [!UICONTROL Geschäftsinhaber] sein. Halten Sie den Namen und die E-Mail-Adresse des Benutzers bereit.
+Für diese Aufgaben müssen Sie Systemadmin für das Produktprofil [!UICONTROL Geschäftsinhaberin bzw. Geschäftsinhaber] in Cloud Manager sein. Halten Sie den Namen und die E-Mail-Adresse der Benutzerin bzw. des Benutzers bereit.
 
-1. Navigieren Sie in [&#128279;](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie &quot;**[!UICONTROL verwalten“]** die Zielumgebung aus. Für diese Umgebung wird eine neue Registerkarte [!DNL Adobe Admin Console].
-1. Wählen Sie das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für die **Veröffentlichungs** Ebene aus, z. B. `AEM Administrators - publish - Program 12345 - Environment 67890`. Content AI indiziert veröffentlichte Inhalte, sodass das Profil auf Veröffentlichungsebene zugewiesen werden muss, nicht auf der Autorenebene.
+1. Navigieren Sie in [Cloud Manager](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie **[!UICONTROL Zugriff verwalten]** für die Zielumgebung aus. [!DNL Adobe Admin Console] wird für diese Umgebung in einer neuen Registerkarte geöffnet.
+1. Wählen Sie das Produktprofil **[!UICONTROL AEM-Benutzende]** oder **[!UICONTROL AEM-Admins]** für die **Veröffentlichungsebene** aus, z. B. `AEM Administrators - publish - Program 12345 - Environment 67890`. Content-KI indiziert veröffentlichte Inhalte, sodass das Profil auf Veröffentlichungsebene zugewiesen werden muss, nicht auf der Autorenebene.
 1. Wählen Sie **[!UICONTROL Benutzende hinzufügen]** aus.
-1. Geben Sie den Namen und die E-Mail-Adresse des Benutzers ein und speichern Sie dann die Änderung. Der Benutzer wird dem Produktprofil hinzugefügt.
+1. Geben Sie den Namen und die E-Mail-Adresse der Benutzerin bzw. des Benutzers ein und speichern Sie dann die Änderung. Die Benutzerin bzw. der Benutzer wird dem Produktprofil hinzugefügt.
 
-Wiederholen Sie diese Schritte für jede Umgebung, in der der Benutzer Zugriff benötigt, z. B. Entwicklung, Staging oder Produktion.
+Wiederholen Sie diese Schritte für jede Umgebung, in der die Benutzerin bzw. der Benutzer Zugriff benötigt, z. B. Entwicklung, Staging oder Produktion.
 
 >[!CAUTION]
 >
->Die Standardproduktprofile mit den Namen **[!UICONTROL AEM-Administratoren oder {]**} AEM-Benutzer dürfen nicht bearbeitet oder gelöscht **.** Beim Umbenennen von **[!UICONTROL AEM]** Administratoren werden Administratorrechte von allen ihnen zugewiesenen entfernt.
+>Bearbeiten oder löschen Sie die Standardproduktprofile namens **[!UICONTROL AEM-Admins]** oder **[!UICONTROL AEM-Benutzende]** nicht. Durch Umbenennen von **[!UICONTROL AEM-Admins]** werden Administratorrechte von allen zugewiesenen Personen entfernt.
 
-### Zuweisung überprüfen {#verify-assignment}
+### Überprüfen der Zuweisung {#verify-assignment}
 
 So überprüfen Sie, ob die Zuweisung erfolgreich war:
 
-1. Öffnen Sie [!DNL Admin Console] das von Ihnen zugewiesene Produktprofil erneut.
-1. Bestätigen Sie, dass der Benutzer in der Mitgliederliste angezeigt wird.
+1. Öffnen Sie in [!DNL Admin Console] das von Ihnen zugewiesene Produktprofil erneut.
+1. Bestätigen Sie, dass die Benutzerin bzw. der Benutzer in der Mitgliederliste angezeigt wird.
 
-Wenn Sie Zugriffs- oder Token-Probleme beheben möchten, vergewissern Sie sich, dass der Benutzer direkt zum Produktprofil hinzugefügt wird und nicht nur über eine Gruppe.
+Wenn Sie Zugriffs- oder Token-Probleme beheben möchten, vergewissern Sie sich, dass die Benutzeirn bzw. der Benutzer direkt zum Produktprofil hinzugefügt ist und nicht nur über eine Gruppe.
 
 ## Schritt 1: Öffnen der Registerkarte für die Content-KI-Konfiguration {#open-tab}
 
@@ -96,13 +96,13 @@ Eine Inhaltsquelle definiert die Website, die von Content-KI gecrawlt und indizi
 
    ![Dropdown-Menü „Aktualisierungshäufigkeit“ mit den verfügbaren Optionen](../assets/content-ai-onboarding-step-5-1.png)
 
-1. Wählen Sie **[!UICONTROL Quelle erstellen]** aus. Die Akquise wird automatisch gestartet und die Quelle wechselt zu **Indizierung**.
+1. Wählen Sie **[!UICONTROL Quelle erstellen]** aus. Die Erfassung wird automatisch gestartet und die Quelle wechselt zu **Indizierung**.
 
-   ![Liste der Inhaltsquellen, in der die neu erstellte Quelle im Indizierungsstatus angezeigt wird](../assets/content-ai-onboarding-step-6.png)
+   ![Liste der Inhaltsquellen mit der neu erstellen Quelle in Indizierungsstatus](../assets/content-ai-onboarding-step-6.png)
 
-## &#x200B;3. Schritt - Akquise erneut ausführen {#trigger-acquisition}
+## Schritt 3: Erneutes Ausführen der Erfassung {#trigger-acquisition}
 
-Die Akquise wird automatisch ausgeführt, wenn Sie eine Quelle erstellen, und dann nach dem Zeitplan, der durch die **[!UICONTROL Aktualisierungshäufigkeit“ festgelegt]**. Sie können eine Ausführung auch jederzeit manuell als Trigger festlegen, z. B. um die Indizierung sofort nach der Veröffentlichung neuer Inhalte neu durchzuführen.
+Die Erfassung wird automatisch beim Erstellen einer Quelle ausgeführt und danach nach dem in **[!UICONTROL Häufigkeit der Aktualisierung]** festgelegten Zeitplan.Sie können eine Ausführung auch jederzeit manuell auslösen, z. B. um die Indizierung sofort nach der Veröffentlichung neuer Inhalte erneut durchzuführen.
 
 1. Wählen Sie in der Quellenliste das Symbol **Weitere Aktionen** (…) neben Ihrer Quelle aus und anschließend **[!UICONTROL Erfassung auslösen]**.
 
@@ -118,7 +118,7 @@ Nach dem Beginn der Erfassung wird der Quellenstatus in Echtzeit aktualisiert.
 
 | Status | Bedeutung |
 | --- | --- |
-| **Neu** | Source hat gerade erstellt. Die automatische Akquise hat noch nicht begonnen. Dieser Status ist kurz. |
+| **Neu** | Quelle gerade erstellt; die automatische Erfassung wurde noch nicht gestartet. Dieser Status ist kurz. |
 | **Indizierung** | Erfassung läuft; Inhalte werden gecrawlt und indiziert. |
 | **Verfügbar** | Indizierung abgeschlossen; die Quelle ist bereit für Suchabfragen. |
 
@@ -132,9 +132,9 @@ Warten Sie, bis der Status **Verfügbar** erreicht, bevor Sie den Index durchsuc
 
 Sobald der Quellenstatus **Verfügbar** lautet, können Sie Suchabfragen direkt in Cloud Manager ausführen, um zu überprüfen, ob die Inhalte korrekt indiziert wurden.
 
-1. Wählen Sie in der Quellliste das Symbol **Suchen** (Lupe) neben Ihrer Quelle aus.
+1. Wählen Sie in der Quellenliste das Symbol **Suchen** neben Ihrer Quelle aus.
 
-   ![Liste der Inhaltsquellen mit hervorgehobenem Suchsymbol in einer verfügbaren Quelle](../assets/content-ai-onboarding-step-13.png)
+   ![Liste der Inhaltsquellen mit hervorgehobenem Symbol „Suchen“ bei einer verfügbaren Quelle](../assets/content-ai-onboarding-step-13.png)
 
 1. Geben Sie eine Abfrage in das Suchfeld ein. Die Ergebnisse zeigen eine Liste übereinstimmender Elemente mit einem Übereinstimmungswert und dem Inhaltstyp (z. B. **PAGE** oder **PDF**). Wenn Sie ein Ergebnis auswählen, wird rechts eine Vorschau geöffnet.
 
@@ -152,13 +152,13 @@ So aktualisieren Sie eine Quellenkonfiguration nach der Erstellung:
 
 1. Aktualisieren Sie im Dialogfeld **[!UICONTROL Content-KI-Quelle ändern]** nach Bedarf die **[!UICONTROL Beschreibung]**, die **[!UICONTROL Website-Adresse]**, **[!UICONTROL auszuschließende URLs]** oder die **[!UICONTROL Aktualisierungshäufigkeit]**. Der **[!UICONTROL Name der Content-KI-Konfiguration]** ist schreibgeschützt und kann nicht geändert werden.
 
-   ![Das Dialogfeld „Content AI Source ändern“ mit hervorgehobenen bearbeitbaren Feldern](../assets/content-ai-onboarding-step-12.png)
+   ![Dialogfeld „Inhalts-KI-Quelle ändern“ mit hervorgehobenen bearbeitbaren Feldern](../assets/content-ai-onboarding-step-12.png)
 
-1. Wählen **[!UICONTROL Speichern]**, um die Änderungen anzuwenden. Die Quellenliste wird mit Ihren Änderungen aktualisiert.
+1. Wählen Sie **[!UICONTROL Speichern]** aus, um die Änderungen anzuwenden. Die Quellenliste wird mit Ihren Änderungen aktualisiert.
 
 ### Löschen einer Quelle {#delete}
 
-1. Wählen Sie in der Quellliste das Symbol **Mehr Aktionen** (…) neben der Quelle aus und klicken Sie dann auf **[!UICONTROL Löschen]**.
+1. Wählen Sie in der Quellenliste das Symbol **Weitere Aktionen** (…) neben der Quelle aus und anschließend **[!UICONTROL Löschen]**.
 
    >[!WARNING]
    >
