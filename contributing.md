@@ -58,4 +58,4 @@ Das Dokumentations-Team freut sich über jeden Beitrag und prüft Ihren Beitrag,
 
 ## Weiterführende Informationen
 
-Weitere Informationen zur Verwendung der GitHub-Autorenplattform [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) Sie im Adobe-Handbuch für Mitwirkende an Dokumenten .
+Weitere Informationen zur Verwendung der GitHub-Autorenplattform [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=de) Sie im Adobe-Handbuch für Mitwirkende an Dokumenten .
