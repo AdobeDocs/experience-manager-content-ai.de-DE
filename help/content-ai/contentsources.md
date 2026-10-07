@@ -6,13 +6,11 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: Content-KI für AEM, Content-KI-Quellen, Erfassung, Cloud Manager, Adobe Developer Console
-source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
-workflow-type: ht
-source-wordcount: '1276'
-ht-degree: 100%
-
+source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+workflow-type: tm+mt
+source-wordcount: '1671'
+ht-degree: 77%
 ---
-
 
 # Einrichten und Verwalten von Content-KI-Quellen
 
@@ -23,9 +21,41 @@ Dieses Handbuch führt Sie durch die Einrichtung von Content-KI-Quellen in Cloud
 Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind:
 
 * Sie verfügen über ein aktives Cloud Manager-Programm mit mindestens einer AEM as a Cloud Service-Umgebung.
+* Sie verfügen über ein Cloud Manager-Produktprofil und können sich bei Cloud Manager anmelden - siehe [Zugriff auf Cloud Manager erhalten](#cloud-manager-access) unten.
 * Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-Benutzende** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen anzeigen kann.
-* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-Admins** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen erstellen und bearbeiten kann.Der Zugriff auf Cloud Manager allein ist nicht ausreichend – siehe [Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile) unten.
+* Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-Admins** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen erstellen und bearbeiten kann. Der Zugriff auf Cloud Manager allein ist nicht ausreichend – siehe [Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile) unten.
 * Das Produktprofil der Umgebung wurde in der **Adobe Admin Console** bereitgestellt.
+
+## Zugriff auf Cloud Manager erhalten {#cloud-manager-access}
+
+Um die Registerkarte **[!UICONTROL Content-KI-]**&quot; zu öffnen, benötigen Sie Zugriff auf die Cloud Manager-Benutzeroberfläche. Der [!DNL Adobe Admin Console]-Administrator Ihres Unternehmens (System- oder Produktadministrator) gewährt diesen Zugriff.
+
+1. Wenden Sie sich an Ihren [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/). Wenn Sie noch kein Mitglied des Unternehmens sind, bitten Sie den Administrator, Ihre Adobe ID- oder E-Mail-Adresse hinzuzufügen.
+1. Bitten Sie den Administrator, Ihnen ein Cloud Manager-Produktprofil für das AEM as a Cloud Service-Programm Ihres Unternehmens zuzuweisen:
+
+   | Produktprofil | Was es erlaubt |
+   | --- | --- |
+   | **[!UICONTROL Geschäftsinhaber]** | Verwaltet Programme. Hat weit reichende Cloud Manager-Berechtigungen, einschließlich **[!UICONTROL Zugriff verwalten]**. |
+   | **[!UICONTROL Bereitstellungs-Manager]** | Verwaltet Umgebungen, Bereitstellungen und Pipelines. |
+   | **[!UICONTROL Programm-Manager]** | Verwaltet die Einrichtung von Teams und die Programmaufsicht. |
+   | **[!UICONTROL Entwickler]** | Funktioniert mit Code und Git. Hat eingeschränkte Cloud Manager-Berechtigungen. |
+
+1. Um Cloud Manager zu öffnen, melden Sie sich bei [Cloud Manager &#x200B;](https://my.cloudmanager.adobe.com/) oder gehen Sie zu [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Wenn Ihre Adobe ID zu mehr als einer Organisation gehört, wählen Sie die richtige Organisation aus.
+
+>[!NOTE]
+>
+>Ein Cloud Manager-Produktprofil gewährt keinen Zugriff auf Inhaltsquellen. Sie benötigen außerdem das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für die Umgebung - siehe [Zuweisen eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile). Benutzende nur mit der Standardbenutzerrolle &quot;Cloud Manager&quot; können eine Umgebung öffnen, erhalten jedoch keinen Zugriff auf Programmebene.
+
+Wenn Sie sich anmelden, das Programm oder die Registerkarte **[!UICONTROL Content-KI-Konfiguration]** jedoch nicht sehen können, bitten Sie Ihren Administrator, Ihre zugewiesenen Produktprofile zu überprüfen. Bestätigen Sie außerdem, dass Sie bei der Anmeldung die richtige Organisation ausgewählt haben. AEM Managed Services verwendet einen anderen [!DNL Admin Console] Produktkontext und ein anderes Setup als AEM as a Cloud Service.
+
+Um beim ersten Onboarding Programme zu erstellen, muss der Systemadministrator zunächst über das Profil **[!UICONTROL Geschäftsinhaber]** verfügen und sich bei Cloud Manager anmelden.
+
+Weitere Informationen finden Sie unter:
+
+* [Zuweisen von Team-Mitgliedern zu Cloud Manager-Produktprofilen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Zugreifen auf Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
+* [AEM as a Cloud Service-Team und -Produktprofile](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [Hinzufügen von Benutzenden und Rollen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil {#assign-product-profile}
 
@@ -41,7 +71,9 @@ Gehen Sie wie folgt vor, um einer Benutzerin bzw. einem Benutzer Zugriff auf [!D
 Für diese Aufgaben müssen Sie Systemadmin für das Produktprofil [!UICONTROL Geschäftsinhaberin bzw. Geschäftsinhaber] in Cloud Manager sein. Halten Sie den Namen und die E-Mail-Adresse der Benutzerin bzw. des Benutzers bereit.
 
 1. Navigieren Sie in [Cloud Manager](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie **[!UICONTROL Zugriff verwalten]** für die Zielumgebung aus. [!DNL Adobe Admin Console] wird für diese Umgebung in einer neuen Registerkarte geöffnet.
-1. Wählen Sie das Produktprofil **[!UICONTROL AEM-Benutzende]** oder **[!UICONTROL AEM-Admins]** für die **Veröffentlichungsebene** aus, z. B. `AEM Administrators - publish - Program 12345 - Environment 67890`. Content-KI indiziert veröffentlichte Inhalte, sodass das Profil auf Veröffentlichungsebene zugewiesen werden muss, nicht auf der Autorenebene.
+1. Wählen Sie das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für **Autoren** und **Veröffentlichungs**-Ebenen aus, z. B. `AEM Administrators - author - Program 12345 - Environment 67890` und `AEM Administrators - publish - Program 12345 - Environment 67890`.
+   * **[!UICONTROL AEM-]**: Nur-Lese-Vorgänge.
+   * **[!UICONTROL AEM-]**: Schreibvorgänge, z. B. das Erstellen, Bearbeiten oder Entfernen einer Inhaltsquelle und das Auslösen der Akquise.
 1. Wählen Sie **[!UICONTROL Benutzende hinzufügen]** aus.
 1. Geben Sie den Namen und die E-Mail-Adresse der Benutzerin bzw. des Benutzers ein und speichern Sie dann die Änderung. Die Benutzerin bzw. der Benutzer wird dem Produktprofil hinzugefügt.
 
@@ -102,7 +134,7 @@ Eine Inhaltsquelle definiert die Website, die von Content-KI gecrawlt und indizi
 
 ## Schritt 3: Erneutes Ausführen der Erfassung {#trigger-acquisition}
 
-Die Erfassung wird automatisch beim Erstellen einer Quelle ausgeführt und danach nach dem in **[!UICONTROL Häufigkeit der Aktualisierung]** festgelegten Zeitplan.Sie können eine Ausführung auch jederzeit manuell auslösen, z. B. um die Indizierung sofort nach der Veröffentlichung neuer Inhalte erneut durchzuführen.
+Die Erfassung wird automatisch beim Erstellen einer Quelle ausgeführt und danach nach dem in **[!UICONTROL Häufigkeit der Aktualisierung]** festgelegten Zeitplan. Sie können eine Ausführung auch jederzeit manuell auslösen, z. B. um die Indizierung sofort nach der Veröffentlichung neuer Inhalte erneut durchzuführen.
 
 1. Wählen Sie in der Quellenliste das Symbol **Weitere Aktionen** (…) neben Ihrer Quelle aus und anschließend **[!UICONTROL Erfassung auslösen]**.
 
@@ -168,7 +200,7 @@ Nach dem Löschen wird die Quelle nicht mehr in der Liste angezeigt.
 
 ## Nächste Schritte {#next-steps}
 
-* [Einrichten eines Projekts in der Adobe Developer Console](setup-adc-project.md) – Erstellen Sie das ADC-Projekt und die Anmeldeinformationen, die Sie für den Aufruf der API benötigen.
+* [Einrichten eines Projekts in der Adobe Developer Console](setup-adc-project.md) – Erstellen Sie das ADC-Projekt und die Anmeldedaten, die Sie für den Aufruf der API benötigen.
 * [Referenzieren der Content-KI-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) – Fragen Sie Ihre indizierten Inhalte über Endpunkte für die semantische Suche, die Volltextsuche oder die Hybridsuche ab.
 
 ## Fehlerbehebung {#troubleshooting}
