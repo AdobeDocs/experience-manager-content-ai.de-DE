@@ -51,7 +51,7 @@ Um die Registerkarte **[!UICONTROL Content-KI-]**&quot; zu öffnen, benötigen S
    | **[!UICONTROL Programm-Manager]** | Verwaltet die Einrichtung von Teams und die Programmaufsicht. |
    | **[!UICONTROL Entwickler]** | Funktioniert mit Code und Git. Hat eingeschränkte Cloud Manager-Berechtigungen. |
 
-1. Um Cloud Manager zu öffnen, melden Sie sich bei [Cloud Manager ](https://my.cloudmanager.adobe.com/) oder gehen Sie zu [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Wenn Ihre Adobe ID zu mehr als einer Organisation gehört, wählen Sie die richtige Organisation aus.
+1. Um Cloud Manager zu öffnen, melden Sie sich bei [Cloud Manager &#x200B;](https://my.cloudmanager.adobe.com/) oder gehen Sie zu [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Wenn Ihre Adobe ID zu mehr als einer Organisation gehört, wählen Sie die richtige Organisation aus.
 
 >[!NOTE]
 >
