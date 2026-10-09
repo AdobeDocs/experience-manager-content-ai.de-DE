@@ -6,7 +6,18 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: Content-KI für AEM, Content-KI-Quellen, Erfassung, Cloud Manager, Adobe Developer Console
-source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 77%
@@ -40,7 +51,7 @@ Um die Registerkarte **[!UICONTROL Content-KI-]**&quot; zu öffnen, benötigen S
    | **[!UICONTROL Programm-Manager]** | Verwaltet die Einrichtung von Teams und die Programmaufsicht. |
    | **[!UICONTROL Entwickler]** | Funktioniert mit Code und Git. Hat eingeschränkte Cloud Manager-Berechtigungen. |
 
-1. Um Cloud Manager zu öffnen, melden Sie sich bei [Cloud Manager &#x200B;](https://my.cloudmanager.adobe.com/) oder gehen Sie zu [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Wenn Ihre Adobe ID zu mehr als einer Organisation gehört, wählen Sie die richtige Organisation aus.
+1. Um Cloud Manager zu öffnen, melden Sie sich bei [Cloud Manager ](https://my.cloudmanager.adobe.com/) oder gehen Sie zu [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Wenn Ihre Adobe ID zu mehr als einer Organisation gehört, wählen Sie die richtige Organisation aus.
 
 >[!NOTE]
 >
@@ -52,9 +63,9 @@ Um beim ersten Onboarding Programme zu erstellen, muss der Systemadministrator z
 
 Weitere Informationen finden Sie unter:
 
-* [Zuweisen von Team-Mitgliedern zu Cloud Manager-Produktprofilen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Zuweisen von Team-Mitgliedern zu Cloud Manager-Produktprofilen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Zugreifen auf Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [AEM as a Cloud Service-Team und -Produktprofile](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [AEM as a Cloud Service-Team und -Produktprofile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
 * [Hinzufügen von Benutzenden und Rollen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil {#assign-product-profile}
