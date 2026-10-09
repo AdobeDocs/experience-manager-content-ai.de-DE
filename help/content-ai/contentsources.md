@@ -63,9 +63,9 @@ Um beim ersten Onboarding Programme zu erstellen, muss der Systemadministrator z
 
 Weitere Informationen finden Sie unter:
 
-* [Zuweisen von Team-Mitgliedern zu Cloud Manager-Produktprofilen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Zuweisen von Team-Mitgliedern zu Cloud Manager-Produktprofilen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Zugreifen auf Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [AEM as a Cloud Service-Team und -Produktprofile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [AEM as a Cloud Service-Team und -Produktprofile](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
 * [Hinzufügen von Benutzenden und Rollen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil {#assign-product-profile}
