@@ -6,19 +6,28 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: Content-KI für AEM, Überblick, Inhaltsquelle, semantische Suche, Erfassung, Cloud Manager
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: ht
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
+workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 100%
-
 ---
-
 
 # Content-KI für AEM – Einführung
 
 ## Intelligente Inhalte – von Grund auf KI-optimiert {#ai-ready}
 
-Kundinnen und Kunden kommen inzwischen über KI mit Marken in Kontakt, bevor sie deren Website besuchen. Chat-Assistenten, KI-Überblicke, Agents, dialogorientierte Suche, KI-Concierges – all diese Funktionen rufen Markeninhalte für die Marke ab, fassen sie zusammen und stellen sie dar.Was sie wiedergeben, ist nur so korrekt, aktuell und markenkonform, wie die Inhalte, die sie erfassen können.
+Kundinnen und Kunden kommen inzwischen über KI mit Marken in Kontakt, bevor sie deren Website besuchen. Chat-Assistenten, KI-Überblicke, Agents, dialogorientierte Suche, KI-Concierges – all diese Funktionen rufen Markeninhalte für die Marke ab, fassen sie zusammen und stellen sie dar. Was sie wiedergeben, ist nur so korrekt, aktuell und markenkonform, wie die Inhalte, die sie erfassen können.
 Für diese Verschiebung ist die Content-KI von AEM konzipiert. Markeninhalte werden als die Grundwahrheit behandelt, basierend auf der KI-Erlebnisse ausgeführt werden. Dies stattet AEM-Kundinnen und -Kunden mit den Tools aus, mit denen sie diese Grundwahrheit auf Autorenseite schneller erstellen und sie für verbraucherorientierte KI-gesteuerte Erlebnisse auf Veröffentlichungsseite reibungslos bereitstellen können.
 
 **Auf der Autorenseite** verankert Content-KI für AEM die Erstellung in freigegebenen Markenquellen. KI-gestützte Inhaltserstellung, das Finden von Inhalten mittels natürlicher Sprache über bestehende Seiteninhalte, Fragmente und Assets hinweg sowie eine markenkonforme Generierung ermöglichen es Teams, Varianten für neue Zielgruppen, Regionen und Kanäle zu erstellen – direkt in AEM und ohne von bereits freigegebenen Inhalten abzuweichen.
