@@ -20,7 +20,7 @@ level_v2:
 source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
 workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 77%
+ht-degree: 100%
 ---
 
 # Einrichten und Verwalten von Content-KI-Quellen
@@ -32,40 +32,40 @@ Dieses Handbuch führt Sie durch die Einrichtung von Content-KI-Quellen in Cloud
 Bevor Sie beginnen, stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind:
 
 * Sie verfügen über ein aktives Cloud Manager-Programm mit mindestens einer AEM as a Cloud Service-Umgebung.
-* Sie verfügen über ein Cloud Manager-Produktprofil und können sich bei Cloud Manager anmelden - siehe [Zugriff auf Cloud Manager erhalten](#cloud-manager-access) unten.
+* Sie verfügen über ein Cloud Manager-Produktprofil und können sich bei Cloud Manager anmelden – siehe [Zugriff auf Cloud Manager](#cloud-manager-access) unten.
 * Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-Benutzende** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen anzeigen kann.
 * Ihre Benutzerin bzw. Ihr Benutzer ist dem Produktprofil **AEM-Admins** für die Zielumgebung zugewiesen, über das die Benutzerin bzw. der Benutzer Inhaltsquellen erstellen und bearbeiten kann. Der Zugriff auf Cloud Manager allein ist nicht ausreichend – siehe [Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile) unten.
 * Das Produktprofil der Umgebung wurde in der **Adobe Admin Console** bereitgestellt.
 
-## Zugriff auf Cloud Manager erhalten {#cloud-manager-access}
+## Zugriff auf Cloud Manager {#cloud-manager-access}
 
-Um die Registerkarte **[!UICONTROL Content-KI-]**&quot; zu öffnen, benötigen Sie Zugriff auf die Cloud Manager-Benutzeroberfläche. Der [!DNL Adobe Admin Console]-Administrator Ihres Unternehmens (System- oder Produktadministrator) gewährt diesen Zugriff.
+Um die Registerkarte **[!UICONTROL Content-KI-Konfiguration]** öffnen zu können, benötigen Sie Zugriff auf die Cloud Manager-Benutzeroberfläche. Die bzw. der [!DNL Adobe Admin Console]-Admin Ihrer Organisation (System- oder Produktadmin) gewährt diesen Zugriff.
 
-1. Wenden Sie sich an Ihren [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/). Wenn Sie noch kein Mitglied des Unternehmens sind, bitten Sie den Administrator, Ihre Adobe ID- oder E-Mail-Adresse hinzuzufügen.
-1. Bitten Sie den Administrator, Ihnen ein Cloud Manager-Produktprofil für das AEM as a Cloud Service-Programm Ihres Unternehmens zuzuweisen:
+1. Kontaktieren Sie Ihre [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/)-Administration. Wenn Sie noch kein Mitglied der Organisation sind, bitten Sie die Administration, Ihre Adobe ID oder E-Mail-Adresse hinzuzufügen.
+1. Bitten Sie die Administration, Ihnen ein Cloud Manager-Produktprofil für das AEM as a Cloud Service-Programm Ihrer Organisation zuzuweisen:
 
-   | Produktprofil | Was es erlaubt |
+   | Produktprofil | Möglichkeiten |
    | --- | --- |
-   | **[!UICONTROL Geschäftsinhaber]** | Verwaltet Programme. Hat weit reichende Cloud Manager-Berechtigungen, einschließlich **[!UICONTROL Zugriff verwalten]**. |
+   | **[!UICONTROL Geschäftsinhaber]** | Verwaltet Programme. Hat weitreichende Cloud Manager-Berechtigungen, einschließlich **[!UICONTROL Zugriff verwalten]**. |
    | **[!UICONTROL Bereitstellungs-Manager]** | Verwaltet Umgebungen, Bereitstellungen und Pipelines. |
    | **[!UICONTROL Programm-Manager]** | Verwaltet die Einrichtung von Teams und die Programmaufsicht. |
    | **[!UICONTROL Entwickler]** | Funktioniert mit Code und Git. Hat eingeschränkte Cloud Manager-Berechtigungen. |
 
-1. Um Cloud Manager zu öffnen, melden Sie sich bei [Cloud Manager &#x200B;](https://my.cloudmanager.adobe.com/) oder gehen Sie zu [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Wenn Ihre Adobe ID zu mehr als einer Organisation gehört, wählen Sie die richtige Organisation aus.
+1. Um Cloud Manager zu öffnen, melden Sie sich bei [Cloud Manager](https://my.cloudmanager.adobe.com/) an oder gehen Sie zu [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Wenn Ihre Adobe ID zu mehr als einer Organisation gehört, wählen Sie die richtige Organisation aus.
 
 >[!NOTE]
 >
->Ein Cloud Manager-Produktprofil gewährt keinen Zugriff auf Inhaltsquellen. Sie benötigen außerdem das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für die Umgebung - siehe [Zuweisen eines Benutzers zu einem AEM-Produktprofil](#assign-product-profile). Benutzende nur mit der Standardbenutzerrolle &quot;Cloud Manager&quot; können eine Umgebung öffnen, erhalten jedoch keinen Zugriff auf Programmebene.
+>Ein Cloud Manager-Produktprofil gewährt keinen Zugriff auf Inhaltsquellen. Sie benötigen außerdem das Produktprofil **[!UICONTROL AEM-Benutzende]** oder **[!UICONTROL AEM-Admins]** für die Umgebung – siehe [Zuweisen von Benutzenden zu einem AEM-Produktprofil](#assign-product-profile). Benutzende, die lediglich die Standardbenutzerrolle „Cloud Manager“ besitzen, können eine Umgebung öffnen, erhalten jedoch keinen Zugriff auf Programmebene.
 
-Wenn Sie sich anmelden, das Programm oder die Registerkarte **[!UICONTROL Content-KI-Konfiguration]** jedoch nicht sehen können, bitten Sie Ihren Administrator, Ihre zugewiesenen Produktprofile zu überprüfen. Bestätigen Sie außerdem, dass Sie bei der Anmeldung die richtige Organisation ausgewählt haben. AEM Managed Services verwendet einen anderen [!DNL Admin Console] Produktkontext und ein anderes Setup als AEM as a Cloud Service.
+Wenn Sie sich anmelden, das Programm oder die Registerkarte **[!UICONTROL Content-KI-Konfiguration]** jedoch nicht sehen können, bitten Sie Ihre Administration, Ihre zugewiesenen Produktprofile zu überprüfen. Bestätigen Sie außerdem, dass Sie bei der Anmeldung die richtige Organisation ausgewählt haben. AEM Managed Services verwendet einen anderen [!DNL Admin Console]-Produktkontext und ein anderes Setup als AEM as a Cloud Service.
 
-Um beim ersten Onboarding Programme zu erstellen, muss der Systemadministrator zunächst über das Profil **[!UICONTROL Geschäftsinhaber]** verfügen und sich bei Cloud Manager anmelden.
+Um beim ersten Onboarding Programme erstellen zu können, muss die oder der Systemadmin zunächst über das Profil **[!UICONTROL Geschäftsinhaber]** verfügen und sich bei Cloud Manager anmelden.
 
 Weitere Informationen finden Sie unter:
 
 * [Zuweisen von Team-Mitgliedern zu Cloud Manager-Produktprofilen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Zugreifen auf Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [AEM as a Cloud Service-Team und -Produktprofile](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [AEM as a Cloud Service – Team- und Produktprofile](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
 * [Hinzufügen von Benutzenden und Rollen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## Zuweisen einer Benutzerin bzw. eines Benutzers zu einem AEM-Produktprofil {#assign-product-profile}
@@ -82,9 +82,9 @@ Gehen Sie wie folgt vor, um einer Benutzerin bzw. einem Benutzer Zugriff auf [!D
 Für diese Aufgaben müssen Sie Systemadmin für das Produktprofil [!UICONTROL Geschäftsinhaberin bzw. Geschäftsinhaber] in Cloud Manager sein. Halten Sie den Namen und die E-Mail-Adresse der Benutzerin bzw. des Benutzers bereit.
 
 1. Navigieren Sie in [Cloud Manager](https://my.cloudmanager.adobe.com/) zu Ihrem Programm und wählen Sie **[!UICONTROL Zugriff verwalten]** für die Zielumgebung aus. [!DNL Adobe Admin Console] wird für diese Umgebung in einer neuen Registerkarte geöffnet.
-1. Wählen Sie das Produktprofil **[!UICONTROL AEM-]** oder **[!UICONTROL AEM-]** für **Autoren** und **Veröffentlichungs**-Ebenen aus, z. B. `AEM Administrators - author - Program 12345 - Environment 67890` und `AEM Administrators - publish - Program 12345 - Environment 67890`.
-   * **[!UICONTROL AEM-]**: Nur-Lese-Vorgänge.
-   * **[!UICONTROL AEM-]**: Schreibvorgänge, z. B. das Erstellen, Bearbeiten oder Entfernen einer Inhaltsquelle und das Auslösen der Akquise.
+1. Wählen Sie das Produktprofil **[!UICONTROL AEM-Benutzende]** oder **[!UICONTROL AEM-Admins]** für die Ebenen **Erstellen** und **Veröffentlichen** aus, z. B. `AEM Administrators - author - Program 12345 - Environment 67890` und `AEM Administrators - publish - Program 12345 - Environment 67890`.
+   * **[!UICONTROL AEM-Benutzende]** – Nur Lesevorgänge.
+   * **[!UICONTROL AEM-Admins]** – Schreibvorgänge, z. B. das Erstellen, Bearbeiten oder Entfernen einer Inhaltsquelle und das Auslösen des Abrufs.
 1. Wählen Sie **[!UICONTROL Benutzende hinzufügen]** aus.
 1. Geben Sie den Namen und die E-Mail-Adresse der Benutzerin bzw. des Benutzers ein und speichern Sie dann die Änderung. Die Benutzerin bzw. der Benutzer wird dem Produktprofil hinzugefügt.
 
