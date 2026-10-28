@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # Einrichten eines Projekts in der Adobe Developer Console {#configure-adc-project}
@@ -126,4 +126,4 @@ Die Dienste der Content-KI für AEM unterstützen zwei Authentifizierungsmethode
 ## Nächste Schritte {#next-steps}
 
 * [Steuern von Inhaltsquellen](contentsources.md) – Konfigurieren Sie eine Inhaltsquelle in Cloud Manager und lösen Sie die Erfassung aus.
-* [Referenzieren der Content-KI-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) – Verwenden Sie Ihr Zugriffstoken oder Ihren API-Schlüssel, um den indizierten Inhalt abzufragen.
+* [Referenzieren der Content-KI-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) – Verwenden Sie Ihr Zugriffstoken oder Ihren API-Schlüssel, um den indizierten Inhalt abzufragen.
